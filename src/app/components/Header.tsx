@@ -65,7 +65,7 @@ function Header() {
                       <Link href="/aboutpage">About Us</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                      <Link href="/myaccount">Contact Us</Link>
+                      <Link href="/contactpage">Contact Us</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <Link href="/faqs">FAQ</Link>
@@ -90,7 +90,7 @@ function Header() {
               </li>
               <li>
                 <Link className="hover:text-[#FB2E86] transition-colors" href="/myaccount">
-                  Account
+                  Accounts
                 </Link>
               </li>
             </ul>
