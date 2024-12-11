@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-
 // Define types for Cart Item
 type CartItem = {
   id: number;
@@ -43,7 +42,7 @@ const initialCartProducts: CartItem[] = [
     quantity: 1,
     color: "Green",
     size: "S",
-    image: "/images/cart3.png",
+    image: "/images/Rectangle 36.png",
   },
   {
     id: 4,
@@ -52,7 +51,7 @@ const initialCartProducts: CartItem[] = [
     quantity: 2,
     color: "Yellow",
     size: "M",
-    image: "/images/cart4.png",
+    image: "/images/Rectangle 37.png",
   },
   {
     id: 5,
@@ -61,9 +60,8 @@ const initialCartProducts: CartItem[] = [
     quantity: 3,
     color: "Black",
     size: "L",
-    image: "/images/cart5.png",
+    image: "/images/Rectangle 38.png",
   },
-
 ];
 
 const Cart = () => {
@@ -96,7 +94,6 @@ const Cart = () => {
 
   return (
     <>
-      
       <div className="p-6 lg:p-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Cart Items */}
         <div className="lg:col-span-2">
@@ -106,7 +103,7 @@ const Cart = () => {
               {cartItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center justify-between bg-white p-4 rounded-lg shadow-md"
+                  className="flex flex-col lg:flex-row items-center justify-between bg-white p-4 rounded-lg shadow-md space-y-4 lg:space-y-0"
                 >
                   <div className="flex items-center space-x-4">
                     <Image
@@ -116,14 +113,14 @@ const Cart = () => {
                       height={80}
                       className="w-20 h-20 rounded-lg object-cover"
                     />
-                    <div>
+                    <div className="text-center lg:text-left">
                       <p className="font-semibold text-[#1D3178]">{item.name}</p>
                       <p className="text-sm text-gray-500">
                         Color: {item.color}, Size: {item.size}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-6">
+                  <div className="flex flex-col lg:flex-row items-center lg:space-x-6 space-y-4 lg:space-y-0">
                     <p className="text-[#1D3178]">${item.price.toFixed(2)}</p>
                     <input
                       type="number"
@@ -131,7 +128,7 @@ const Cart = () => {
                       onChange={(e) =>
                         updateQuantity(item.id, Number(e.target.value))
                       }
-                      className="w-12 px-2 py-1 border rounded-md text-center"
+                      className="w-16 px-2 py-1 border rounded-md text-center"
                       min="1"
                     />
                     <p className="font-bold text-[#1D3178]">
@@ -148,16 +145,16 @@ const Cart = () => {
           )}
 
           {/* Action Buttons */}
-          <div className="flex justify-between mt-6">
+          <div className="flex flex-col sm:flex-row justify-between mt-6 space-y-4 sm:space-y-0">
             <button
               onClick={resetCart}
-              className="px-4 py-2 bg-[#FB2E86] text-white rounded-md text-sm hover:bg-pink-600"
+              className="w-full sm:w-auto px-4 py-2 bg-[#FB2E86] text-white rounded-md text-sm hover:bg-pink-600"
             >
               Update Cart
             </button>
             <button
               onClick={clearCart}
-              className="px-4 py-2 bg-[#FB2E86] text-white rounded-md text-sm hover:bg-pink-600"
+              className="w-full sm:w-auto px-4 py-2 bg-[#FB2E86] text-white rounded-md text-sm hover:bg-pink-600"
             >
               Clear Cart
             </button>
@@ -178,18 +175,17 @@ const Cart = () => {
             <span>${(calculateTotal() + 15).toFixed(2)}</span>
           </p>
           <li>
-                <Link href="/billingpage">
-            <button
-              type="submit"
-              className="w-full py-3 bg-[#FB2E86] text-white rounded-md font-semibold hover:bg-pink-600"
-            >
-              Proceed To Checkout
-            </button>
+            <Link href="/billingpage">
+              <button
+                type="submit"
+                className="w-full py-3 bg-[#FB2E86] text-white rounded-md font-semibold hover:bg-pink-600"
+              >
+                Proceed To Checkout
+              </button>
             </Link>
-            </li>
+          </li>
         </div>
       </div>
-      
     </>
   );
 };

@@ -35,7 +35,7 @@ function SignUp() {
       {/* Left Section (Image) */}
       <div className="w-full sm:w-1/2 flex justify-center items-center p-4">
         <Image
-          src="/images/cart2.png"
+          src="/images/signup.webp"
           alt="Cart"
           width={500}
           height={500}
@@ -113,7 +113,7 @@ function SignUp() {
             {/* Create Account Button */}
             <button
               type="submit"
-              className="w-full px-6 py-2 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600"
+              className="w-full px-6 py-2 bg-pink-500 text-white font-semibold rounded-md hover:bg-pink-600"
             >
               Create an Account
             </button>
