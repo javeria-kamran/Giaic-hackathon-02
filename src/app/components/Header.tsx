@@ -26,7 +26,9 @@ function Header() {
           {/* Left Section: Logo and Search Bar */}
           <div className="flex items-center gap-8">
             {/* Logo */}
+            <Link className="hover:text-[#FB2E86] transition-colors" href="/hecto">
             <h1 className="text-3xl font-bold">Hekto</h1>
+            </Link>
 
             {/* Search Bar */}
             <div className="hidden sm:flex items-center border rounded-md overflow-hidden bg-gray-100">
@@ -44,7 +46,7 @@ function Header() {
           {/* Center Section: Navigation Links */}
           <div className="hidden sm:flex items-center gap-x-8">
             <ul className="flex gap-x-8 items-center">
-            <li>
+              <li>
                 <Link className="hover:text-[#FB2E86] transition-colors" href="/">
                   Home
                 </Link>
@@ -62,10 +64,16 @@ function Header() {
                       <Link href="/shopcart">Cart</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/billingpage">Billing Details</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/ordercmpltd">Order Completed</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
                       <Link href="/aboutpage">About Us</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                      <Link href="/contactpage">Contact Us</Link>
+                      <Link href="/myaccount">My Account</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <Link href="/faqs">FAQ</Link>
@@ -74,7 +82,7 @@ function Header() {
                 )}
               </li>
               <li>
-                <Link className="hover:text-[#FB2E86] transition-colors" href="/shopcart">
+                <Link className="hover:text-[#FB2E86] transition-colors" href="/productpage">
                   Products
                 </Link>
               </li>
@@ -89,8 +97,8 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#FB2E86] transition-colors" href="/myaccount">
-                  Accounts
+                <Link className="hover:text-[#FB2E86] transition-colors" href="/contactpage">
+                Contact
                 </Link>
               </li>
             </ul>
@@ -138,11 +146,19 @@ function Header() {
                 <Link href="/shopcart">Cart</Link>
               </li>
               <li className="px-4 py-2 hover:bg-gray-100">
-                <Link href="/about">About Us</Link>
-              </li>
+                      <Link href="/checkout">Billing Details</Link>
+                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/ordercompleted">Order Completed</Link>
+                    </li>
               <li className="px-4 py-2 hover:bg-gray-100">
-                <Link href="/myaccount">Contact Us</Link>
+                <Link href="/aboutpage">About Us</Link>
               </li>
+              
+              <li className="px-4 py-2 hover:bg-gray-100">
+                      <Link href="/myaccount">My Account</Link>
+                    </li>
+                    
               <li className="px-4 py-2 hover:bg-gray-100">
                 <Link href="/faqs">FAQ</Link>
               </li>
@@ -151,6 +167,11 @@ function Header() {
 
           {/* Mobile Navigation Links */}
           <ul className="w-full text-center">
+            <li>
+              <Link className="block py-2 hover:text-[#FB2E86]" href="/">
+                Home
+              </Link>
+            </li>
             <li>
               <Link className="block py-2 hover:text-[#FB2E86]" href="/shoplist">
                 Products
@@ -168,7 +189,12 @@ function Header() {
             </li>
             <li>
               <Link className="block py-2 hover:text-[#FB2E86]" href="/myaccount">
-                Contact
+                My Account
+              </Link>
+            </li>
+            <li>
+              <Link className="block py-2 hover:text-[#FB2E86]" href="/contactpage">
+              Contact Us
               </Link>
             </li>
           </ul>

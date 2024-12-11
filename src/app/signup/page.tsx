@@ -35,7 +35,7 @@ function SignUp() {
       {/* Left Section (Image) */}
       <div className="w-full sm:w-1/2 flex justify-center items-center p-4">
         <Image
-          src="/images/cart.png"
+          src="/images/cart2.png"
           alt="Cart"
           width={500}
           height={500}

@@ -1,18 +1,85 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  AiOutlineHeart,
-  AiOutlineShoppingCart,
-  AiOutlineEye,
-} from "react-icons/ai";
-import { AntDesignOutlined } from "@ant-design/icons";
-import { StarFilled } from "@ant-design/icons";
+import { AiOutlineHeart, AiOutlineShoppingCart, AiOutlineEye } from "react-icons/ai";
 
+
+
+const shoplist = [
+  {
+    id: 1,
+    name: "Accumsan tincidunt",
+    image: "/images/Rectangle 32.svg",
+    price: "$120.00",
+    oldPrice: "$150.00",
+    description: "Consectetur adipiscing elit.",
+    rating: 4,
+    colors: ["bg-[#DE9034]", "bg-[#FB2E86]", "bg-[#5E37FF]"]
+  },
+  {
+    id: 2,
+    name: "In nulla",
+    image: "/images/Rectangle 32 (1).png",
+    price: "$99.00",
+    oldPrice: "$130.00",
+    description: "Magna in est adipiscing in phasellus non in justo.",
+    rating: 5,
+    colors: ["bg-[#DE9034]", "bg-[#FB2E86]", "bg-[#5E37FF]"]
+  },
+  {
+    id: 3,
+    name: "Vel sem",
+    image: "/images/Rectangle 32 (2).png",
+    price: "$99.00",
+    oldPrice: "$130.00",
+    description: "Lorem ipsum dolor sit amet.",
+    rating: 5,
+    colors: ["bg-[#DE9034]", "bg-[#FB2E86]", "bg-[#5E37FF]"]
+  }, {
+    id: 4,
+    name: "Porttitor cum",
+    image: "/images/Rectangle 32 (3).png",
+    price: "$99.00",
+    oldPrice: "$130.00",
+    description: "Lorem ipsum dolor sit amet.",
+    rating: 5,
+    colors: ["bg-[#DE9034]", "bg-[#FB2E86]", "bg-[#5E37FF]"]
+  }, {
+    id: 5,
+    name: "Nunc in",
+    image: "/images/Rectangle 32 (4).png",
+    price: "$99.00",
+    oldPrice: "$130.00",
+    description: "Lorem Magna in est adipiscing.",
+    rating: 5,
+    colors: ["bg-[#DE9034]", "bg-[#FB2E86]", "bg-[#5E37FF]"]
+  }, {
+    id: 6,
+    name: "Vitae facilisis",
+    image: "/images/Rectangle 32 (5).png",
+    price: "$99.00",
+    oldPrice: "$130.00",
+    description: "consectetur adipiscing elit. Magna in.",
+    rating: 5,
+    colors: ["bg-[#DE9034]", "bg-[#FB2E86]", "bg-[#5E37FF]"]
+  }, {
+    id: 7,
+    name: "Curabitur lectus",
+    image: "/images/Rectangle 32 (6).png",
+    price: "$99.00",
+    oldPrice: "$130.00",
+    description: "Lorem ipsum dolor sit amet, consectetur.",
+    rating: 5,
+    colors: ["bg-[#DE9034]", "bg-[#FB2E86]", "bg-[#5E37FF]"]
+  },
+];
 
 const ShopList = () => {
-  return (
-    <div className="conatiner">
+ return (
+ 
+  <>
+  
     <div className="font-sans text-[#151875]">
+      {/* Header Section */}
       <div className="py-28 px-8">
         <h1 className="text-4xl font-bold">Shop List</h1>
         <div className="flex items-center gap-2">
@@ -20,7 +87,7 @@ const ShopList = () => {
           <p>Pages</p>
           <p className="text-[#FB2E86]">Shopping List</p>
         </div>
-      </div> 
+      </div>
 
       {/* Filter and Sorting Section */}
       <div className="py-4 flex flex-col lg:flex-row justify-between px-8">
@@ -44,7 +111,7 @@ const ShopList = () => {
             <input
               type="text"
               id="perPage"
-              className="w-16 p-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-16 p-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-[#FB2E86]"
             />
           </div>
 
@@ -58,7 +125,7 @@ const ShopList = () => {
             </label>
             <select
               id="sortBy"
-              className="p-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="p-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-[#FB2E86]"
             >
               <option value="bestMatch">Best Match</option>
               <option value="priceLowHigh">Price: Low to High</option>
@@ -68,425 +135,100 @@ const ShopList = () => {
 
           {/* View */}
           <div className="flex items-center gap-2">
-            <label htmlFor="view" className="text-sm font-medium text-gray-700">
+            <label htmlFor="view" className="text-sm font-medium focus:outline-none focus:ring-1 focus:ring-[#FB2E86]">
               View:
             </label>
             <input
               type="text"
               id="view"
-              className="w-16 p-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-16 p-1 border rounded text-sm focus:outline-none focus:ring-1 focus:ring-[#FB2E86]"
             />
-            <div>
-              <div className="Group37 w-96 h-64 left-[374px] top-[656px] absolute">
-                <img
-                  className="Rectangle32 w-80 h-56 left-[19.88px] top-[17.67px] absolute"
-                  src="/images/Rectangle 32.png"
-                />
-                <div className="Group35 w-36 h-9 left-[364.43px] top-[188.84px] absolute">
-                  <div className="FluentCart24Regular w-5 h-5 pl-0.5 pr-1 pt-1 pb-0.5 left-[6.63px] top-[6.63px] absolute justify-center items-center inline-flex">
-                    <div className="Group w-4 h-4 relative"></div>
-                  </div>
-                  <div className="UilHeartAlt w-5 h-5 px-0.5 py-0.5 left-[61.84px] top-[7.73px] absolute justify-center items-center inline-flex" />
-                  <div className="UilSearchPlus w-4 h-4 px-px py-px left-[118.17px] top-[8.83px] absolute justify-center items-center inline-flex" />
-                </div>
-                <div className="AccumsanTincidunt left-[365.54px] top-[12.80px] absolute text-blue-900 text-xl font-bold font-['Josefin Sans']">
-                  Accumsan tindulant
-                </div>
-                <div className="Ellipse24 w-3 h-3 left-[614px] top-[18.80px] absolute bg-orange-400 rounded-full" />
-                <div className="Ellipse25 w-3 h-3 left-[632px] top-[18.80px] absolute bg-pink-600 rounded-full" />
-                <div className="Ellipse26 w-3 h-3 left-[650px] top-[18.80px] absolute bg-indigo-600 rounded-full" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[488.12px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[504.69px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[520.15px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[535.61px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[551.07px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="LoremIpsumDolorSitAmetConsecteturAdipiscingElitMagnaInEstAdipiscingInPhasellusNonInJusto w-96 h-12 left-[365.54px] top-[111.54px] absolute text-gray-400 text-lg font-normal font-['Lato'] leading-loose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna
-                  in est adipiscing in phasellus non in justo.
-                </div>
-                <div>
-                  <img
-                    className="left-[334.54px] top-[195.54px] absolute"
-                    src="/images/Group 35.png"
-                    alt=""
-                  />
-                </div>
-                <div className="2600 w-12 h-4 left-[365.54px] top-[85.03px] absolute text-blue-900 text-base font-normal font-['Josefin Sans']">
-                  $26.00
-                </div>
-                <div className="5200 w-12 h-4 left-[422.97px] top-[85.03px] absolute text-pink-500 text-base font-normal font-['Josefin Sans'] line-through">
-                  $52.00
-                </div>
-                <div className="5200 w-12 h-4 left-[500.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[512.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[528.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[542.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[557.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "gray" }} />
-                </div>
-              </div>
-              <div className="Group188 w-96 h-64 left-[374px] top-[943px] absolute">
-                <img
-                  className="Rectangle32 w-80 h-56 left-[19.88px] top-[17.67px] absolute"
-                  src="/images/Rectangle 32 (1).png"
-                />
-                <div className="Group35 w-36 h-9 left-[364.43px] top-[188.84px] absolute">
-                  <div className="FluentCart24Regular w-5 h-5 pl-0.5 pr-1 pt-1 pb-0.5 left-[6.63px] top-[6.63px] absolute justify-center items-center inline-flex">
-                    <div className="Group w-4 h-4 relative"></div>
-                  </div>
-                  <div className="UilHeartAlt w-5 h-5 px-0.5 py-0.5 left-[61.84px] top-[7.73px] absolute justify-center items-center inline-flex" />
-                  <div className="UilSearchPlus w-4 h-4 px-px py-px left-[118.17px] top-[8.83px] absolute justify-center items-center inline-flex" />
-                </div>
-                <div className="InNulla left-[365.54px] top-[12.80px] absolute text-blue-900 text-xl font-bold font-['Josefin Sans']">
-                  In nulla
-                </div>
-                <div className="Ellipse24 w-3 h-3 left-[614px] top-[18.80px] absolute bg-orange-400 rounded-full" />
-                <div className="Ellipse25 w-3 h-3 left-[632px] top-[18.80px] absolute bg-pink-600 rounded-full" />
-                <div className="Ellipse26 w-3 h-3 left-[650px] top-[18.80px] absolute bg-indigo-600 rounded-full" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[488.12px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[504.69px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[520.15px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[535.61px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[551.07px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="LoremIpsumDolorSitAmetConsecteturAdipiscingElitMagnaInEstAdipiscingInPhasellusNonInJusto w-96 h-12 left-[365.54px] top-[111.54px] absolute text-gray-400 text-lg font-normal font-['Lato'] leading-loose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna
-                  in est adipiscing in phasellus non in justo.
-                </div>
-                <div>
-                  <img
-                    className="left-[334.54px] top-[195.54px] absolute"
-                    src="/images/Group 35.png"
-                    alt=""
-                  />
-                </div>
-                <div className="2600 w-12 h-4 left-[365.54px] top-[85.03px] absolute text-blue-900 text-base font-normal font-['Josefin Sans']">
-                  $26.00
-                </div>
-                <div className="5200 w-12 h-4 left-[422.97px] top-[85.03px] absolute text-pink-500 text-base font-normal font-['Josefin Sans'] line-through">
-                  $52.00
-                </div>
-                <div className="5200 w-12 h-4 left-[500.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[512.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[528.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[542.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[557.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "gray" }} />
-                </div>
-              </div>
-              <div className="Group189 w-96 h-64 left-[374px] top-[1231px] absolute">
-                <img
-                  className="Rectangle32 w-80 h-56 left-[19.88px] top-[17.67px] absolute"
-                  src="/images/Rectangle 32 (2).png"
-                />
-                <div className="Group35 w-36 h-9 left-[364.43px] top-[188.84px] absolute">
-                  <div className="FluentCart24Regular w-5 h-5 pl-0.5 pr-1 pt-1 pb-0.5 left-[6.63px] top-[6.63px] absolute justify-center items-center inline-flex">
-                    <div className="Group w-4 h-4 relative"></div>
-                  </div>
-                  <div className="UilHeartAlt w-5 h-5 px-0.5 py-0.5 left-[61.84px] top-[7.73px] absolute justify-center items-center inline-flex" />
-                  <div className="UilSearchPlus w-4 h-4 px-px py-px left-[118.17px] top-[8.83px] absolute justify-center items-center inline-flex" />
-                </div>
-                <div className="VelSem left-[365.54px] top-[12.80px] absolute text-blue-900 text-xl font-bold font-['Josefin Sans']">
-                  Vel sem
-                </div>
-                <div className="Ellipse24 w-3 h-3 left-[614px] top-[18.80px] absolute bg-orange-400 rounded-full" />
-                <div className="Ellipse25 w-3 h-3 left-[632px] top-[18.80px] absolute bg-pink-600 rounded-full" />
-                <div className="Ellipse26 w-3 h-3 left-[650px] top-[18.80px] absolute bg-indigo-600 rounded-full" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[488.12px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[504.69px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[520.15px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[535.61px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[551.07px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="LoremIpsumDolorSitAmetConsecteturAdipiscingElitMagnaInEstAdipiscingInPhasellusNonInJusto w-96 h-12 left-[365.54px] top-[111.54px] absolute text-gray-400 text-lg font-normal font-['Lato'] leading-loose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna
-                  in est adipiscing in phasellus non in justo.
-                </div>
-                <div className="relative">
-                  <img
-                    className="left-[334.54px] top-[195.54px] absolute"
-                    src="public/images/Group 35.png"
-                    alt=""
-                  />
-                </div>
-                <div className="2600 w-12 h-4 left-[365.54px] top-[85.03px] absolute text-blue-900 text-base font-normal font-['Josefin Sans']">
-                  $26.00
-                </div>
-                <div className="5200 w-12 h-4 left-[422.97px] top-[85.03px] absolute text-pink-500 text-base font-normal font-['Josefin Sans'] line-through">
-                  $52.00
-                </div>
-                <div className="5200 w-12 h-4 left-[500.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[512.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[528.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[542.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[557.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "gray" }} />
-                </div>
-              </div>
-              <div className="Group190 w-96 h-64 left-[371px] top-[1519px] absolute">
-                <img
-                  className="Rectangle32 w-80 h-56 left-[19.88px] top-[17.67px] absolute"
-                  src="/images/Rectangle 32 (3).png"
-                />
-                <div className="Group35 w-36 h-9 left-[364.43px] top-[188.84px] absolute">
-                  <div className="FluentCart24Regular w-5 h-5 pl-0.5 pr-1 pt-1 pb-0.5 left-[6.63px] top-[6.63px] absolute justify-center items-center inline-flex">
-                    <div className="Group w-4 h-4 relative"></div>
-                  </div>
-                  <div className="UilHeartAlt w-5 h-5 px-0.5 py-0.5 left-[61.84px] top-[7.73px] absolute justify-center items-center inline-flex" />
-                  <div className="UilSearchPlus w-4 h-4 px-px py-px left-[118.17px] top-[8.83px] absolute justify-center items-center inline-flex" />
-                </div>
-                <div className="PorttitorCum left-[365.54px] top-[12.80px] absolute text-blue-900 text-xl font-bold font-['Josefin Sans']">
-                  Porttitor cum
-                </div>
-                <div className="Ellipse24 w-3 h-3 left-[614px] top-[18.80px] absolute bg-orange-400 rounded-full" />
-                <div className="Ellipse25 w-3 h-3 left-[632px] top-[18.80px] absolute bg-pink-600 rounded-full" />
-                <div className="Ellipse26 w-3 h-3 left-[650px] top-[18.80px] absolute bg-indigo-600 rounded-full" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[488.12px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[504.69px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[520.15px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[535.61px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[551.07px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="LoremIpsumDolorSitAmetConsecteturAdipiscingElitMagnaInEstAdipiscingInPhasellusNonInJusto w-96 h-12 left-[365.54px] top-[111.54px] absolute text-gray-400 text-lg font-normal font-['Lato'] leading-loose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna
-                  in est adipiscing in phasellus non in justo.
-                </div>
-                <div>
-                  <img
-                    className="left-[334.54px] top-[195.54px] absolute"
-                    src="/images/Group 35.png"
-                    alt=""
-                  />
-                </div>
-                <div className="2600 w-12 h-4 left-[365.54px] top-[85.03px] absolute text-blue-900 text-base font-normal font-['Josefin Sans']">
-                  $26.00
-                </div>
-                <div className="5200 w-12 h-4 left-[422.97px] top-[85.03px] absolute text-pink-500 text-base font-normal font-['Josefin Sans'] line-through">
-                  $52.00
-                </div>
-                <div className="5200 w-12 h-4 left-[500.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[512.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[528.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[542.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[557.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "gray" }} />
-                </div>
-              </div>
-              <div className="Group192 w-96 h-64 left-[371px] top-[1806px] absolute">
-                <img
-                  className="Rectangle32 w-80 h-56 left-[19.88px] top-[17.67px] absolute"
-                  src="/images/Rectangle 32 (4).png"
-                />
-                <div className="Group35 w-36 h-9 left-[364.43px] top-[188.84px] absolute">
-                  <div className="FluentCart24Regular w-5 h-5 pl-0.5 pr-1 pt-1 pb-0.5 left-[6.63px] top-[6.63px] absolute justify-center items-center inline-flex">
-                    <div className="Group w-4 h-4 relative"></div>
-                  </div>
-                  <div className="UilHeartAlt w-5 h-5 px-0.5 py-0.5 left-[61.84px] top-[7.73px] absolute justify-center items-center inline-flex" />
-                  <div className="UilSearchPlus w-4 h-4 px-px py-px left-[118.17px] top-[8.83px] absolute justify-center items-center inline-flex" />
-                </div>
-                <div className="NuncIn left-[365.54px] top-[12.80px] absolute text-blue-900 text-xl font-bold font-['Josefin Sans']">
-                  Nunc in
-                </div>
-                <div className="Ellipse24 w-3 h-3 left-[614px] top-[18.80px] absolute bg-orange-400 rounded-full" />
-                <div className="Ellipse25 w-3 h-3 left-[632px] top-[18.80px] absolute bg-pink-600 rounded-full" />
-                <div className="Ellipse26 w-3 h-3 left-[650px] top-[18.80px] absolute bg-indigo-600 rounded-full" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[488.12px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[504.69px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[520.15px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[535.61px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[551.07px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="LoremIpsumDolorSitAmetConsecteturAdipiscingElitMagnaInEstAdipiscingInPhasellusNonInJusto w-96 h-12 left-[365.54px] top-[111.54px] absolute text-gray-400 text-lg font-normal font-['Lato'] leading-loose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna
-                  in est adipiscing in phasellus non in justo.
-                </div>
-                <div>
-                  <img
-                    className="left-[334.54px] top-[195.54px] absolute"
-                    src="/images/Group 35.png"
-                    alt=""
-                  />
-                </div>
-                <div className="2600 w-12 h-4 left-[365.54px] top-[85.03px] absolute text-blue-900 text-base font-normal font-['Josefin Sans']">
-                  $26.00
-                </div>
-                <div className="5200 w-12 h-4 left-[422.97px] top-[85.03px] absolute text-pink-500 text-base font-normal font-['Josefin Sans'] line-through">
-                  $52.00
-                </div>
-                <div className="5200 w-12 h-4 left-[500.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[512.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[528.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[542.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[557.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "gray" }} />
-                </div>
-              </div>
-              <div className="Group193 w-96 h-64 left-[378px] top-[2093px] absolute">
-                <img
-                  className="Rectangle32 w-80 h-56 left-[19.88px] top-[17.67px] absolute"
-                  src="/images/Rectangle 32 (5).png"
-                />
-                <div className="Group35 w-36 h-9 left-[364.43px] top-[188.84px] absolute">
-                  <div className="FluentCart24Regular w-5 h-5 pl-0.5 pr-1 pt-1 pb-0.5 left-[6.63px] top-[6.63px] absolute justify-center items-center inline-flex">
-                    <div className="Group w-4 h-4 relative"></div>
-                  </div>
-                  <div className="UilHeartAlt w-5 h-5 px-0.5 py-0.5 left-[61.84px] top-[7.73px] absolute justify-center items-center inline-flex" />
-                  <div className="UilSearchPlus w-4 h-4 px-px py-px left-[118.17px] top-[8.83px] absolute justify-center items-center inline-flex" />
-                </div>
-                <div className="VitaeFacilisis left-[365.54px] top-[12.80px] absolute text-blue-900 text-xl font-bold font-['Josefin Sans']">
-                  Vitae facilisis
-                </div>
-                <div className="Ellipse24 w-3 h-3 left-[614px] top-[18.80px] absolute bg-orange-400 rounded-full" />
-                <div className="Ellipse25 w-3 h-3 left-[632px] top-[18.80px] absolute bg-pink-600 rounded-full" />
-                <div className="Ellipse26 w-3 h-3 left-[650px] top-[18.80px] absolute bg-indigo-600 rounded-full" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[488.12px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[504.69px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[520.15px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[535.61px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[551.07px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="LoremIpsumDolorSitAmetConsecteturAdipiscingElitMagnaInEstAdipiscingInPhasellusNonInJusto w-96 h-12 left-[365.54px] top-[111.54px] absolute text-gray-400 text-lg font-normal font-['Lato'] leading-loose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna
-                  in est adipiscing in phasellus non in justo.
-                </div>
-                <div>
-                  <img
-                    className="left-[334.54px] top-[195.54px] absolute"
-                    src="/images/Group 35.png"
-                    alt=""
-                  />
-                </div>
-                <div className="2600 w-12 h-4 left-[365.54px] top-[85.03px] absolute text-blue-900 text-base font-normal font-['Josefin Sans']">
-                  $26.00
-                </div>
-                <div className="5200 w-12 h-4 left-[422.97px] top-[85.03px] absolute text-pink-500 text-base font-normal font-['Josefin Sans'] line-through">
-                  $52.00
-                </div>
-                <div className="5200 w-12 h-4 left-[500.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[512.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[528.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[542.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[557.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "gray" }} />
-                </div>
-              </div>
-              <div className="Group194 w-96 h-64 left-[378px] top-[2381px] absolute">
-                <img
-                  className="Rectangle32 w-80 h-56 left-[19.88px] top-[17.67px] absolute"
-                  src="/images/Rectangle 32 (6).png"
-                />
-                <div className="Group35 w-36 h-9 left-[364.43px] top-[188.84px] absolute">
-                  <div className="FluentCart24Regular w-5 h-5 pl-0.5 pr-1 pt-1 pb-0.5 left-[6.63px] top-[6.63px] absolute justify-center items-center inline-flex">
-                    <div className="Group w-4 h-4 relative"></div>
-                  </div>
-                  <div className="UilHeartAlt w-5 h-5 px-0.5 py-0.5 left-[61.84px] top-[7.73px] absolute justify-center items-center inline-flex" />
-                  <div className="UilSearchPlus w-4 h-4 px-px py-px left-[118.17px] top-[8.83px] absolute justify-center items-center inline-flex" />
-                </div>
-                <div className="CurabiturLectus left-[365.54px] top-[12.80px] absolute text-blue-900 text-xl font-bold font-['Josefin Sans']">
-                  Curabitur lectus
-                </div>
-                <div className="Ellipse24 w-3 h-3 left-[614px] top-[18.80px] absolute bg-orange-400 rounded-full" />
-                <div className="Ellipse25 w-3 h-3 left-[632px] top-[18.80px] absolute bg-pink-600 rounded-full" />
-                <div className="Ellipse26 w-3 h-3 left-[650px] top-[18.80px] absolute bg-indigo-600 rounded-full" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[488.12px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[504.69px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[520.15px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[535.61px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="AntDesignStarFilled w-3.5 h-3.5 px-px pt-px pb-0.5 left-[551.07px] top-[85.03px] absolute justify-center items-center inline-flex" />
-                <div className="LoremIpsumDolorSitAmetConsecteturAdipiscingElitMagnaInEstAdipiscingInPhasellusNonInJusto w-96 h-12 left-[365.54px] top-[111.54px] absolute text-gray-400 text-lg font-normal font-['Lato'] leading-loose">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna
-                  in est adipiscing in phasellus non in justo.
-                </div>
-                <div>
-                  <img
-                    className="left-[334.54px] top-[195.54px] absolute"
-                    src="/images/Group 35.png"
-                    alt=""
-                  />
-                </div>
-                <div className="2600 w-12 h-4 left-[365.54px] top-[85.03px] absolute text-blue-900 text-base font-normal font-['Josefin Sans']">
-                  $26.00
-                </div>
-                <div className="5200 w-12 h-4 left-[422.97px] top-[85.03px] absolute text-pink-500 text-base font-normal font-['Josefin Sans'] line-through">
-                  $52.00
-                </div>
-                <div className="5200 w-12 h-4 left-[500.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[512.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[528.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[542.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "yellow" }} />
-                </div>
-                <div className="5200 w-12 h-4 left-[557.97px] top-[85.03px] absolute ">
-                  <StarFilled style={{ color: "gray" }} />
-                </div>
-              </div>
-              <div className="Group246 w-96 h-14 left-[4px] top-[3573px] absolute">
-                <div className="Group168 w-96 h-14 left-0 top-0 absolute">
-                  <div className="Rectangle103 w-96 h-14 left-0 top-0 absolute bg-violet-100" />
-                </div>
-              </div>
-              <img
-                className="Image1174 w-96 h-24 left-[508px] top-[2869px] absolute"
-                src="/images/image 1174.png"
-              />
-            </div>
           </div>
         </div>
       </div>
+
+      {/* Product List */}
+      <div className="p-8">
+        <div className="space-y-6">
+          {shoplist.map((product) => (
+            <div
+              key={product.id}
+              className="flex flex-col lg:flex-row bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            >
+              {/* Product Image */}
+              <div className="lg:w-1/3 flex-shrink-0">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={500}
+                  height={400}
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+              </div>
+
+              {/* Product Details */}
+              <div className="lg:w-2/3 lg:ml-6 mt-4 lg:mt-0">
+                <div className="w-full flex justify-between items-center">
+                  <h3 className="text-xl font-semibold">{product.name}</h3>
+                  {/* Color Options */}
+                  <div className="mt-2 flex gap-1">
+                    {product.colors.map((color, index) => (
+                      <span
+                        key={index}
+                        className={`w-3 h-3 ${color} rounded-full`}
+                      ></span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Price and Old Price */}
+                <div className="mt-4 flex items-center space-x-2">
+                  <span className="text-lg font-bold">{product.price}</span>
+                  <span className="text-red-500 line-through">
+                    {product.oldPrice}
+                  </span>
+                </div>
+                <p className="mt-2 text-gray-600 w-96">{product.description}</p>
+
+                {/* Rating */}
+                <div className="mt-2 flex items-center">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <span
+                      key={index}
+                      className={`${
+                        index < product.rating
+                          ? "text-yellow-400"
+                          : "text-gray-300"
+                      } text-lg`}
+                    >
+                      ★
+                    </span>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="mt-4 flex space-x-4">
+                  <button className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300">
+                    <AiOutlineHeart size={24} />
+                  </button>
+                  <Link href="/shopcart">
+                    <button className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300">
+                      <AiOutlineShoppingCart size={24} />
+                    </button>
+                  </Link>
+                  <button className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300">
+                    <AiOutlineEye size={24} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-    </div>
+    
+    </>
   );
 };
-
-
 
 export default ShopList;
