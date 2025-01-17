@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 /* globals.css */
+
+
+body {
+  overflow-x: hidden;
+}
 .container {
     display: flex;
     flex-direction: column; /* Stacks elements vertically */
